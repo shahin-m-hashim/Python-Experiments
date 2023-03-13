@@ -1,2 +1,2 @@
 # Python-Experiments
-A dummy repo for my own project,identification and experimenting with python
+A dummy repo for my own programs experimenting with python
