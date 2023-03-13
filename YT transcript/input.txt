@@ -1,0 +1,725 @@
+In the last lecture, we have started studying about the operating system.
+0:03
+and we also saw the introduction of the operating system.
+0:07
+We saw what an operating system really is.
+0:10
+What it really does,
+0:11
+and we have also seen the functions of the operating system.
+0:14
+We have also seen some basic examples of the operating system.
+0:19
+Now, In this lecture,
+0:20
+we will see some of the basic concepts that you need to know,
+0:25
+before we really go into the details of the operating system.
+0:28
+So, in this lecture we will mainly study about
+0:31
+computer system operations.
+0:33
+So, basically it is about the structure of computer system.
+0:36
+Now, why I am doing this is because,
+0:39
+some basic knowledge of the structure of the computer system
+0:42
+is required to understand, how the operating system works.
+0:46
+So, by studying about the structure of the computer system,
+0:50
+It will provide you a base for an understanding of the operating system.
+0:54
+So, instead of directly diving into how the operating system works,
+0:58
+we should have a base about this
+1:00
+so, it will help us to understand
+1:02
+in a clearer way about the operating system.
+1:05
+After studying this, you will study every concept of the operating system.
+1:09
+You will not feel completely blank
+1:12
+and you will have a proper idea of why
+1:14
+we are doing this and why certain things are working in that way.
+1:19
+Not only that,
+1:20
+while having a basic introduction to this structure of computer system,
+1:24
+you are getting a basic introduction to
+1:27
+computer organization and architecture,
+1:29
+which is an important course
+1:31
+as far as Computer Science and Electronics is concerned.
+1:34
+Alright!
+1:35
+So, Now let us see what we can study
+1:38
+from this computer system operation in this lecture.
+1:41
+So, here it says,
+1:43
+a modern general purpose computer system
+1:46
+consists of one or more CPUs,
+1:49
+and a number of device controllers
+1:51
+connected through a common bus, that provides access to the shared memory.
+1:56
+So don't worry about this definition,
+1:58
+It will become clear as I show you a diagram related to this
+2:02
+and we will see what this actually means.
+2:04
+So,here I have a diagram, which we can use
+2:07
+to explain these sentences written here.
+2:09
+So, let us break the sentence into parts to see what each line means.
+2:14
+A modern general purpose computer system
+2:17
+consists of one or more CPUs.
+2:20
+Now, what do we mean by this?
+2:22
+A modern general purpose computer,
+2:24
+it consists of one or more central processing units.
+2:28
+Now, What is a CPU?
+2:29
+CPU is the main part,
+2:32
+we can call it the brain of the computer system.
+2:35
+It is the processing unit.
+2:37
+that is where all the computations, processing and calculations
+2:41
+take place in a computer.
+2:43
+Now, when we mostly talk about CPU what comes to our mind
+2:46
+Usually as a novice
+2:48
+what comes to our mind is the big box beside your desktop that you have.
+2:52
+and that is what we generally think a CPU is.
+2:56
+We just look at it and call it as the CPU.
+2:58
+But that box is not just a CPU,
+3:01
+that box consists of many things like motherboard,
+3:04
+CD ROM, USB ports, many things are there.
+3:08
+But, CPU is just a small chip that is there,
+3:11
+embedded into the Mother Board.
+3:14
+and that small chip is responsible for
+3:17
+performing all the computation and calculations
+3:20
+and that is your actual CPU.
+3:23
+So the box, you can just called it a cabinet
+3:25
+but the CPU is just a small unit that is present
+3:29
+inside that box, which is there in your motherboard.
+3:32
+Alright!
+3:33
+Then the modern computer system,
+3:34
+may have one or more CPUs
+3:37
+depending on the processing power of your computer.
+3:40
+so, that is the meaning of the first line.
+3:42
+A number of device controllers are connected through a common bus
+3:47
+that provides access to the shared memory.
+3:50
+So, here if you look into this diagram
+3:52
+we have some hard wares like
+3:54
+Disk, which can be hard-disk or anything like that,
+3:57
+and then we have some more hardwares like
+3:59
+Mouse, Keyboard, Printer
+4:02
+Then you have your monitor over here.
+4:04
+It is not limited to this, but this is just an example I am showing you.
+4:07
+And then each of these hard wares and devices
+4:10
+is connected to a controller.
+4:13
+This controller is responsible for
+4:15
+the way these devices work.
+4:17
+So, here, for example we have the disk
+4:20
+which is connected by the disk controller.
+4:23
+and then these devices like Mouse, Keyboard, Printer,
+4:26
+assuming that they are all USB devices
+4:29
+are connected to the USB controller.
+4:32
+Because these are connected to the USB ports
+4:34
+and USB Controller would take care of how these devices perform.
+4:38
+And then you have your monitor,
+4:40
+that is your display, and that is connected to a video adapter.
+4:45
+These adapter or controller are responsible or they are in charge of
+4:50
+how these devices actually work.
+4:52
+And then the CPU, we have it here,The Central Processing Unit,
+4:57
+along with these controllers
+4:59
+are connected by a common bus,
+5:03
+that we have here.
+5:04
+This line over here, represent the common bus.
+5:08
+This one is which we talked about
+5:09
+And we see that they are all connected to this bus, it is common to all of them
+5:14
+and that bus is connected to a shared memory.
+5:17
+Alright!
+5:18
+Let's see this in more detail.
+5:19
+So, here I have some points written down.
+5:21
+Each device controller is in charge of a specific type of device.
+5:25
+So, here we have device controllers,
+5:27
+and each of these controllers or adapters
+5:30
+are in control of some specific kind of device, as it is shown here.
+5:35
+and then the CPU and device controllers
+5:39
+can execute concurrently competing for the memory cycle.
+5:43
+Now, what do we mean by this line?
+5:45
+So,we see that they are all connected to a memory controller over here.
+5:49
+And why is that?
+5:50
+That is because
+5:51
+I already taught you in the first lecture that
+5:53
+Whenever something has to be executed or loaded,
+5:58
+It has to be loaded into your main memory.
+6:01
+Your main memory is your RAM,
+6:03
+Random Access memory that you have
+6:05
+and don't worry if you don't know about it in detail.
+6:08
+I will do another lecture, explaining about
+6:11
+the storage and memory unit, that we have.
+6:13
+So, just know that whenever something has to be executed,
+6:17
+it has to be loaded into your main memory.
+6:19
+And your main memory is not unlimited or infinite but it is limited.
+6:24
+It is a finite amount of memory that you have.
+6:27
+like in your laptops or in your desktops
+6:29
+you may have two GB of RAM,
+6:31
+or eight GB of RAM so on and so forth.
+6:34
+So, depending on the size of the RAM,
+6:36
+that is the amount of memory or main memory that you have.
+6:39
+And whenever you execute something,
+6:41
+that has to be loaded into your main memory.
+6:43
+Now, We see that
+6:45
+All these devices in order to work they need to be loaded into the main memory
+6:49
+for any execution that has to be performed.
+6:53
+and then the disk controllers or the adapters will take care of these.
+6:57
+and this has to be loaded into the main memory.
+7:01
+We see here that all these device controllers along with the CPU
+7:05
+can execute concurrently.
+7:06
+Now, what do we mean by concurrently,
+7:08
+concurrently means that
+7:10
+all these devices or controllers can execute at the same time.
+7:16
+Now, let's take an example
+7:18
+Suppose you are watching something like a video or a movie on your monitor,
+7:23
+and at the same time you can minimize
+7:25
+and type something using your keyboard in Microsoft Word.
+7:28
+Now, when you do this you don't experience lag.
+7:31
+You never experience lag like
+7:33
+when you are typing something your video gets paused or like that
+7:37
+Why?
+7:38
+Because they are all working concurrently, working at the same time.
+7:42
+That is how powerful your system is,
+7:44
+and that is why you have to appreciate the beauty and power of your system.
+7:48
+In order to make all these work seamlessly
+7:51
+Without any lag or any problems, what do we need?
+7:56
+To ensure orderly access to the shared memory,
+7:59
+a memory controller is provided.
+8:01
+whose function is to synchronize access to memory.
+8:05
+So, as I Have already told you,
+8:06
+all these devices they need access to the memory.
+8:10
+Because they all have to be loaded into the memory in order to work.
+8:13
+And now we need to ensure that,
+8:16
+all of these devices get their required share of memory
+8:20
+So that they can be loaded correctly and executed in the right way
+8:25
+without having any problem for the user.
+8:28
+So what we have is the memory controller.
+8:31
+So, we have a memory controller here,
+8:32
+which ensures that every controller and every device
+8:37
+gets the proper access
+8:39
+to the memory that they need so that they can perform or work
+8:42
+smoothly without having any problem.
+8:45
+So, the memory controller synchronizes everything
+8:48
+and makes everything works in a very smooth way.
+8:50
+So, that is what we can understand by this diagram.
+8:53
+And from this diagram, we can understand the basic structure of
+8:56
+how things are arranged.
+8:58
+So, first, we have the CPU,
+9:00
+then the CPU along with the disk controllers
+9:03
+which is responsible for the working of each device.
+9:06
+Like I have shown here they are all connected by a common bus.
+9:11
+This line represents the common bus
+9:13
+and that is connected to the memory controller, which takes care of
+9:17
+how the memory has to be shared between each device
+9:21
+so that its working is proper and smooth.
+9:24
+Alright!
+9:25
+Now, I want to introduce some important terms to you.
+9:28
+You have already seen the structure of the computer system.
+9:31
+Just the basic structure of using that diagram.
+9:33
+Now, I Want you to know these terms, which we are going to study here right now
+9:38
+The first one is known as The Bootstrap Program.
+9:40
+So, What is a Bootstrap Program?
+9:42
+The initial program that runs
+9:44
+when a computer is powered up
+9:46
+or rebooted is known as the Bootstrap Program.
+9:49
+So, a Bootstrap Program,
+9:50
+is the first program that is executed
+9:54
+or runs when you power up or reboot your computer system.
+9:59
+So, when you go and press the power button of your computer,
+10:02
+the first program that loads,
+10:05
+that helps in powering up the system is known as the Bootstrap program.
+10:09
+Now, let's see what are the features and functions of this Bootstrap program.
+10:13
+So, the bootstrap Program is stored in the ROM.
+10:16
+ROM stands for Read Only Memory,
+10:18
+which is a kind of secondary memory.
+10:20
+So, your Bootstrap program is stored in the ROM
+10:23
+and then it must know how to load the OS and start executing the system.
+10:29
+So, as I told you Bootstrap is the first program that loads
+10:33
+when you power on your system.
+10:35
+and that program
+10:37
+must load your operating system.
+10:40
+The Operating system is the interface between you and the physical hardware.
+10:45
+So, Your Operating system is also a software.
+10:48
+It is kind of a system software.
+10:50
+So, that Operating system is already residing or stored
+10:55
+somewhere in your secondary memory.
+10:57
+And then the bootstrap program must know
+11:00
+how to load that operating system and start it for you.
+11:04
+Also I told you that
+11:05
+Operating system is stored somewhere in the secondary memory.
+11:09
+So, the Bootstrap program must know
+11:11
+where your operating system is stored.
+11:13
+And It must go there and invoke the operating system
+11:17
+and It must load the OS kernel into your main memory.
+11:22
+It must locate and load the OS kernel into memory.
+11:27
+Now, what do you mean by kernel?
+11:28
+The Kernel is like the heart of the OS,
+11:30
+is the main part of the Operating system.
+11:33
+So, that has to be loaded into your memory.
+11:36
+And then the Bootstrap program,
+11:37
+when you switch on your computer, it is the first program that runs.
+11:41
+And it goes and finds the Operating system,
+11:45
+and then the kernel of the operating system
+11:47
+takes it and loads it into the memory
+11:50
+so that the operating system will come live
+11:53
+and after that the rest of the thing the operating system will take care of.
+11:56
+So, that was about the Bootstrap program.
+11:59
+Now, the next thing that
+12:00
+I want to introduce to you is known as an Interrupt.
+12:03
+So, let's see what an interrupt is.
+12:05
+So, what comes to your mind when you hear the word interrupt.
+12:08
+So in English, we know what is an interrupt.
+12:10
+When you are doing something if someone comes and disturbs you,
+12:14
+If someone comes and says
+12:15
+"Please stop doing this work and do something else"
+12:18
+that is an interrupt, we are interrupted.
+12:20
+So, think of it in the same context,
+12:23
+this is almost the same even for the case of the computer system.
+12:26
+let's see how we can define this and what it actually is?
+12:30
+So, the occurrence of an event
+12:32
+is usually signaled by an interrupt.
+12:35
+from the hardware or the software
+12:37
+So, we know that the CPU is always working
+12:41
+It is doing some work,
+12:42
+and when the CPU is doing that work,
+12:44
+sometimes the hardware or software, may interrupt the CPU.
+12:49
+It may come and tell the CPU
+12:50
+"Wait! just wait with whatever you are doing,
+12:53
+and please execute this task that I am giving you, this is more important".
+12:57
+So, the CPU has to stop and it has to execute the task that comes up.
+13:02
+and that is known as an interrupt.
+13:04
+So, the hardware may trigger an interrupt at any time
+13:08
+by sending a signal to the CPU.
+13:10
+usually by the system bus.
+13:13
+We have different hardware in our system
+13:15
+and the hardware can trigger an interrupt.
+13:18
+and how does he do that?
+13:21
+It sends a signal to the CPU.
+13:23
+and how can he send a signal to the CPU?
+13:25
+by the way of the system bus
+13:27
+I showed you in the previous diagram what I mean by the system bus.
+13:32
+So, here this line, which represents the common bus we have.
+13:36
+Similarly, using a system bus
+13:39
+the hardware can send the interrupt to the CPU,
+13:41
+and the CPU has to stop whatever it's doing and has to execute the interrupt.
+13:46
+So, we will see how the CPU responds to the interrupts later.
+13:49
+So, let's understand what is mean by interrupt.
+13:52
+Now, the next term I want to introduce to you is System Call.
+13:56
+also known as the Monitor call.
+13:58
+Let's see what it says.
+13:59
+A software may trigger an interrupt
+14:01
+by executing a special operation called as system call.
+14:04
+Now, as I told you,
+14:06
+when a hardware triggers an interrupt we usually called it as an interrupt,
+14:09
+but if the software is causing the interrupt,
+14:15
+then that is known as a system call or a monitor call.
+14:18
+So, if it is hardware, we usually called it as an interrupt.
+14:22
+If it is a triggered by a software, it is called as a system call or monitor call.
+14:28
+So, I hope that made clear to you what an interrupt actually means.
+14:32
+now let us see how does the CPU respond when it receives an interrupt.
+14:37
+So, here it says
+14:38
+when the CPU is interrupted
+14:40
+it stops the work, it is doing
+14:42
+and immediately transfers execution to a fixed location.
+14:46
+So, I already told you how interrupt can arise, either from hardware or software.
+14:50
+So, the CPU is already doing some work,
+14:53
+and then immediately it gets an interrupt
+14:56
+from either a hardware or a software,
+14:58
+So, when the CPU is interrupted in that way, what does it do?
+15:02
+It stops what it is doing,
+15:04
+and then immediately transfers the execution to a fixed location.
+15:10
+So, whatever the execution the CPU was doing, it just stopped it
+15:13
+and transferred its execution to a fixed location.
+15:17
+Now, what is the fixed location that we are talking about?
+15:19
+The fixed location usually contains the starting address,
+15:24
+where the service routine of the interrupt is located.
+15:28
+Now, we have a new term here which is Service Routine.
+15:31
+Now, what is a Service Routine?
+15:33
+Service Routine is nothing but where
+15:36
+what the interrupt actually wants to do is written.
+15:40
+So, let's not go into the technical details,
+15:42
+I will just tell you basically what it means.
+15:44
+When an interrupt arises,
+15:46
+there is something that the interrupt wants to do.
+15:48
+Something it wants to execute,
+15:52
+So, what has to be executed or what the interrupts want to do,
+15:58
+is written in the Service routine.
+16:00
+So, every interrupt has its Service routine
+16:02
+known as the Interrupt Service Routine, So, every interrupt has its Service routine
+16:03
+known as the Interrupt Service Routine,
+16:05
+Sometime it is known as I.S.R.
+16:08
+So when the CPU is interrupted,
+16:10
+It stops what it is doing,
+16:11
+and it immediately transfers its execution
+16:15
+to the starting address of the interrupt service routine.
+16:20
+So, interrupt service routine may be located somewhere
+16:23
+and it has a starting address, from where it should start its execution.
+16:27
+So, the CPU stops what it was doing,
+16:29
+and transfers its execution
+16:32
+to the starting address of the interrupt service routine.
+16:36
+So, that is the first thing the CPU does when it is interrupted.
+16:39
+and then what happens!
+16:40
+The interrupt service routine executes.
+16:43
+So, whatever is written in the interrupt service routine
+16:45
+gets executed completely,
+16:46
+And then on completion, the CPU resumes the interrupted computation.
+16:52
+So, we know that the C.P.U was already doing something before
+16:56
+So, when the interrupt arise,
+16:57
+It transfers its execution to the interrupt service routine.
+17:02
+then it executes it and when it is done the CPU can go back to where it came from.
+17:17
+and it resumes whatever it was doing.
+17:20
+So, this is how the CPU responds to an interrupt.
+17:24
+And I hope that made it clear to you, how an interrupt is handled by a CPU.
+17:30
+At least the basics!
+17:31
+So, this was just a basic introduction to the computer system's operation.
+17:35
+I will not go into great detail,
+17:38
+because it is just the basics that you need to know
+17:40
+before you really understand the details of the operating system.
+17:44
+So, I hope this was clear to you.
+17:45
+In the next lecture, we will see
+17:47
+about the storage structure and memory,
+17:50
+which is also an important topic, that you need to know
+17:52
+for understanding the Operating system.
+17:54
+So, thank you for watching this!
+17:56
+and see you in the next one.
